@@ -33,12 +33,21 @@ class sparse_matrix
 			if(!n_cols) n_cols = n_rows;
 			
 		}
-		/*
-   ~SparseMatrix(){
-        p_head[0].clear();
-        p_head[1].clear();
-    }
-		*/
+		~sparse_matrix(){
+		node **n;
+        for (size_t i=0; i<n_rows; ++i) {
+            for (size_t j=0; j<n_cols; ++j) {
+                if(find(n,i,j,true))
+      				delete *n
+            }
+        }
+		}
+
+
+
+
+
+
 		bool find(node **& n, size_t i, size_t j, bool c)
 		{
 			n = &p_head[c][i];
@@ -73,6 +82,7 @@ class sparse_matrix
             cout<< "\n";
         }
     }
+
     void transpuesta()
     {
         node **n;
@@ -109,4 +119,11 @@ int main()
 print 
 destructor
 remove
+css
+
+map solo destruye
+destruir nodos
+liberar memoria en bloque
+eliminar nodos de adentro
+
 */
