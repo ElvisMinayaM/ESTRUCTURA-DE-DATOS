@@ -100,8 +100,26 @@ void BinomialHeap<T>::insert(T v)
     
 
 };
+/*
+void PrintDot(Nodo<T> *n, ofstream & os){
 
+	if(n!=0){   						            // Si n es diferente a 0 significa que no esta vacio
+		if(n->Hijo[0])  os<<n->Dato<<"->"<<n->Hijo[0]->Dato<<endl;//Si tiene hijo izquierdo imprime su dato y el de su hijo
+		if(n->Hijo[1])  os<<n->Dato<<"->"<<n->Hijo[1]->Dato<<endl;//si tiene hijo derecho imprime su dato y el hijo
+		PrintDot( n->Hijo[0] ,os);			// llama la funcion tomando a n apuntando a su hijo izquierdo
+		PrintDot( n->Hijo[1] ,os);			// Finalmente lo mismo pero con n apuntando a su hijo derecho
+	}
+}
 
+void PrintDot(char * p){
+	 ofstream file(p);
+	 file<<"digraph {"<<endl;
+	 PrintDot(this->Raiz,file);
+        file<<" }"<<endl;
+	}
+};
+
+*/
 int main(){
     BHeap<int> Binomial;
     Binomial.Insert(5);
